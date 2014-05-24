@@ -1,0 +1,13 @@
+<div style="border-bottom:1px solid #ccc;margin-top:10px;">
+    <h3 style="color:#f00;">
+      <%= link_to_unless_current post.title, post%>&nbsp;
+        <span style="font-size:12px;">
+          <%= time_ago_in_words(post.created_at)%>
+        </span>
+    </h3>
+    <p style="font-size:12px;color:#444;">
+      <pre>
+      <%= post.content %>
+      </pre>
+    </p>
+  </div>

@@ -1,0 +1,11 @@
+<h2>
+  最近发布的内容.. &nbsp;&nbsp;
+  <%= link_to '发布新内容',new_post_path, 'style' => 'font-size:14px;' %>
+</h2>
+<hr />
+<% @posts.order('created_at desc').each do |post|%>
+  <%= render :partial => "text",:locals => {:post => post} %>
+<% end %>
+
+
+
